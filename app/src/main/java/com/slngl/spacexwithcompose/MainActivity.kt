@@ -13,7 +13,9 @@ import androidx.navigation.navArgument
 import com.slngl.spacexwithcompose.ui.theme.SpaceXWithComposeTheme
 import com.slngl.spacexwithcompose.view.HistoryDetailScreen
 import com.slngl.spacexwithcompose.view.HistoryListScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
