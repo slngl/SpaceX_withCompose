@@ -31,31 +31,30 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
 
                 NavHost(navController = navController, startDestination = "history_list_screen") {
-                    //HistoryListScreen
+                    // HistoryListScreen
                     composable("history_list_screen") {
                         HistoryListScreen(navController)
                     }
-                    //HistoryDetailScreen
+                    // HistoryDetailScreen
                     composable(
                         "history_detail_screen/{id}",
-                        arguments = listOf(
-                            navArgument("id") {
-                                type = NavType.StringType
-                            },
-                        ),
+                        arguments =
+                            listOf(
+                                navArgument("id") {
+                                    type = NavType.IntType
+                                },
+                            ),
                     ) {
-
-                        val historyId = remember {
-                            it.arguments?.getString("id")
-                        }
+                        val historyId =
+                            remember {
+                                it.arguments?.getInt("id")
+                            }
                         HistoryDetailScreen(
-                            id = historyId ?: "",
+                            id = historyId ?: 0,
                         )
-
                     }
                 }
             }
         }
     }
 }
-
