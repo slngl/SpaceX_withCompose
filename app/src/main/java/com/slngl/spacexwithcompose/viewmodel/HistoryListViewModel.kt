@@ -41,7 +41,6 @@ class HistoryListViewModel
                                     id = historyData.id,
                                     title = historyData.title,
                                     details = historyData.details,
-                                    eventDateUtc = historyData.eventDateUtc,
                                 )
                             }
                         historyList.value = historyItems
