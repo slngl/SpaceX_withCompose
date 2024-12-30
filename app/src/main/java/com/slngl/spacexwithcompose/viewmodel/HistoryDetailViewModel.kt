@@ -13,5 +13,5 @@ class HistoryDetailViewModel
     constructor(
         private val repository: HistoryRepository,
     ) : ViewModel() {
-        suspend fun getHistoryDetail(id: String): Resource<HistoryData> = repository.getHistory(id.toInt())
+        suspend fun getHistoryDetail(id: Int): Resource<HistoryData> = repository.getHistory(id)
     }
